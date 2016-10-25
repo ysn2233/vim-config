@@ -41,6 +41,8 @@ nmap wm :WMToggle<cr>
 
 :se lines=42 columns=125 "windows size 
 
+:hi MatchParen ctermbg=blue ctermfg=white "bracket match color
+
 " bracket auto-complete
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
