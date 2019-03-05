@@ -24,6 +24,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 " front end of fzf, fuzzy search (require fzf installed in the system)
 Plug 'junegunn/fzf'
+" display tag info (require ctag install in the system)
+Plug 'majutsushi/tagbar'
 " git integration
 Plug 'motemen/git-vim'
 " language server and auto complete
@@ -32,6 +34,8 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'rking/ag.vim'
 " display tree structure directory
 Plug 'scrooloose/nerdtree'
+" fast comment
+Plug 'scrooloose/nerdcommenter'
 " airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -45,7 +49,7 @@ set tabstop=4
 set shiftwidth=4
 set mouse=a
 set nu
-set	foldmethod=syntax
+set	foldmethod=indent
 set foldlevel=100
 set autoindent
 
@@ -63,6 +67,9 @@ map tp :tabp<CR>
 map tm :tabm
 map tt :tabnew
 map ts :tab split<CR>
+
+" open terminal
+map <F2> :terminal<CR>
 
 " save as sudo
 ca w!! w !sudo tee "%"
@@ -98,3 +105,6 @@ vmap <C-j> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 " Use <C-k> to jump to backward placeholder, which is default
 let g:coc_snippet_prev = '<c-k>'
+
+"[Plug]==TagBar
+nmap <F8> :TagbarToggle<CR>
