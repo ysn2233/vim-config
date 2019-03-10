@@ -52,9 +52,13 @@ set nu
 set	foldmethod=indent
 set foldlevel=100
 set autoindent
-
 set incsearch	" incremental search
 set hlsearch	" highlighted search results
+
+set cursorline  " highlight current line
+
+" jj to escape
+imap jj <ESC>
 
 " map jumping to beginning and end of line(emacs mode, same as default
 " terminal, '0' and '$' quite sucks for me)
@@ -106,5 +110,3 @@ let g:coc_snippet_next = '<c-j>'
 " Use <C-k> to jump to backward placeholder, which is default
 let g:coc_snippet_prev = '<c-k>'
 
-"[Plug]==TagBar
-nmap <F8> :TagbarToggle<CR>
