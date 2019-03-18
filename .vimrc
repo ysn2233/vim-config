@@ -73,7 +73,7 @@ map tt :tabnew
 map ts :tab split<CR>
 
 " open terminal
-map <F2> :terminal<CR>
+map <F2> :below ter ++rows=15<CR>
 
 " save as sudo
 ca w!! w !sudo tee "%"
