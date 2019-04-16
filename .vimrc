@@ -29,7 +29,7 @@ Plug 'majutsushi/tagbar'
 " git integration
 Plug 'motemen/git-vim'
 " language server and auto complete
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
 " code search (require the_silver_search installed in the system)
 Plug 'rking/ag.vim'
 " display tree structure directory
@@ -71,6 +71,10 @@ map tp :tabp<CR>
 map tm :tabm
 map tt :tabnew
 map ts :tab split<CR>
+
+" select next/previous match
+imap <C-j> <C-n>
+imap <C-k> <C-p>
 
 " open terminal
 map <F2> :below ter ++rows=15<CR>
